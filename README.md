@@ -42,26 +42,26 @@ Use the **asFormGroup** or **asFormArray** pipes where ever you are getting the 
 
 ```html
  <div class="details" [formGroup]="testForm.get('details') | asFormGroup">
-      <mat-form-field>
-        <mat-label>name</mat-label>
-        <input matInput placeholder="name" formControlName="name" />
-      </mat-form-field>
-    </div>
+    <mat-form-field>
+    <mat-label>name</mat-label>
+    <input matInput placeholder="name" formControlName="name" />
+    </mat-form-field>
+</div>
 ```
 
 ```html
  <div class="addresses">
     <div
-    *ngFor="
+    *ngFor="ng update
         let addressFormGroup of (testForm.get('addresses') | asFormArray)
         .controls
     "
     [formGroup]="addressFormGroup | asFormGroup"
     >
-    <mat-form-field>
-        <mat-label>city</mat-label>
-        <input matInput placeholder="city" formControlName="city" />
-    </mat-form-field>
+        <mat-form-field>
+            <mat-label>city</mat-label>
+            <input matInput placeholder="city" formControlName="city" />
+        </mat-form-field>
     </div>
 </div>
 ```
