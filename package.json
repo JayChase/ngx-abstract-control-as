@@ -1,6 +1,13 @@
 {
   "name": "ngx-abstract-control-as",
   "version": "0.0.1-alpha",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaychase/angular2-useful-swiper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jaychase/angular2-useful-swiper/issues"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -17,10 +24,12 @@
   "private": false,
   "dependencies": {
     "@angular/animations": "~11.2.1",
+    "@angular/cdk": "^11.2.4",
     "@angular/common": "~11.2.1",
     "@angular/compiler": "~11.2.1",
     "@angular/core": "~11.2.1",
     "@angular/forms": "~11.2.1",
+    "@angular/material": "^11.2.4",
     "@angular/platform-browser": "~11.2.1",
     "@angular/platform-browser-dynamic": "~11.2.1",
     "@angular/router": "~11.2.1",
