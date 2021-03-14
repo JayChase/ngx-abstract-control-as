@@ -1,6 +1,14 @@
 {
   "name": "ngx-abstract-control-as",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "keywords": [
+    "Angular",
+    "Reactive Forms",
+    "strict template checking ",
+    "carousel",
+    "AbstractControl is not assignable to",
+    "AbstractControl is missing the following properties from type FormGroup"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/JayChase/ngx-abstract-control-as.git"
