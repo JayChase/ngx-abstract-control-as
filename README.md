@@ -1,4 +1,4 @@
-# NgxAbstractControlAs
+# ngx-abstract-control-as
 
 If you are using strict template checking and getting the following errors in your reactive forms this library can help out.
 
