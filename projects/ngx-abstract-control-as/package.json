@@ -1,6 +1,13 @@
 {
   "name": "ngx-abstract-control-as",
-  "version": "0.0.1-alpha",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JayChase/ngx-abstract-control-as.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JayChase/ngx-abstract-control-as/issues"
+  },
   "peerDependencies": {
     "@angular/common": "^11.2.1",
     "@angular/core": "^11.2.1"
