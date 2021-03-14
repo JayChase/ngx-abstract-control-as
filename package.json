@@ -1,14 +1,20 @@
 {
   "name": "ngx-abstract-control-as",
-  "version": "0.0.0",
+  "version": "0.0.1-alpha",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "rm -rf dist && ng build ngx-abstract-control-as --prod && ng build demo --prod",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "copy-files": "copy README.md dist\\ngx-abstract-control-as && copy LICENSE.md dist\\ngx-abstract-control-as",
+    "pack": "cd dist/ngx-abstract-control-as && npm pack",
+    "prep-lib": "npm run build && npm run copy-files && npm run pack"
   },
-  "private": true,
+  "author": "JayChase",
+  "license": "MIT",
+  "private": false,
   "dependencies": {
     "@angular/animations": "~11.2.1",
     "@angular/common": "~11.2.1",
@@ -23,6 +29,7 @@
     "zone.js": "~0.11.3"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "~0.1102.1",
     "@angular/cli": "~11.2.1",
     "@angular/compiler-cli": "~11.2.1",
     "@types/jasmine": "~3.6.0",
@@ -35,6 +42,7 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "ng-packagr": "^11.0.0",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
