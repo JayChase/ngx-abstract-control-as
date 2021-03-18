@@ -14,7 +14,6 @@ import { AppComponent } from './app.component';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatInputModule,
-
     NgxAbstractControlAsModule,
     MatCardModule,
   ],

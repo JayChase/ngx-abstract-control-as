@@ -2,6 +2,8 @@
 
 If you are using strict template checking and getting the following errors in your reactive forms this library can help out.
 
+[StackBlitz](https://stackblitz.com/edit/ngx-abstract-control-as-demo?file=src/app/app.component.html)
+
 ```bash
  Type 'AbstractControl' is missing the following properties from type
       'FormGroup': controls, registerControl, addControl, removeControl, and 3
@@ -16,7 +18,7 @@ Type 'AbstractControl' is not assignable to type 'any[] | Iterable<any> | (Itera
 
 ## Usage
 
-Install the package 
+Install the package
 
 ```bash
  npm i --save ngx-abstract-control-as
@@ -29,40 +31,38 @@ import { NgxAbstractControlAsModule } from 'ngx-abstract-control-as';
 
 @NgModule({
   declarations: [],
-  imports: [  
+  imports: [
     NgxAbstractControlAsModule,
     ...
   ],
-  
+
 })
-expo
 ```
 
 Use the **asFormGroup** or **asFormArray** pipes where ever you are getting the error.
 
 ```html
- <div class="details" [formGroup]="testForm.get('details') | asFormGroup">
-    <mat-form-field>
+<div class="details" [formGroup]="testForm.get('details') | asFormGroup">
+  <mat-form-field>
     <mat-label>name</mat-label>
     <input matInput placeholder="name" formControlName="name" />
-    </mat-form-field>
+  </mat-form-field>
 </div>
 ```
 
 ```html
- <div class="addresses">
-    <div
+<div class="addresses">
+  <div
     *ngFor="ng update
         let addressFormGroup of (testForm.get('addresses') | asFormArray)
         .controls
     "
     [formGroup]="addressFormGroup | asFormGroup"
-    >
-        <mat-form-field>
-            <mat-label>city</mat-label>
-            <input matInput placeholder="city" formControlName="city" />
-        </mat-form-field>
-    </div>
+  >
+    <mat-form-field>
+      <mat-label>city</mat-label>
+      <input matInput placeholder="city" formControlName="city" />
+    </mat-form-field>
+  </div>
 </div>
 ```
-
