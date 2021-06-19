@@ -5,10 +5,7 @@ import { AbstractControl, FormArray } from '@angular/forms';
   name: 'asFormArray',
 })
 export class AsFormArrayPipe implements PipeTransform {
-  transform(
-    value: AbstractControl | undefined | null,
-    ...args: unknown[]
-  ): FormArray | undefined {
-    return value ? (value as FormArray) : undefined;
+  transform(value: AbstractControl, ...args: unknown[]): FormArray {
+    return value as FormArray;
   }
 }
